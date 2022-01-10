@@ -1,7 +1,7 @@
 import org.apache.spark.SparkContext
 
 
-object HelloWorldSpark extends App {
+object Part2 extends App {
 
   val sc = new SparkContext("local", "HelloWorld" )
   val stopWordsInput = sc.textFile("src/files/stopwords.txt").flatMap(line => line.split("\\W+")).map(_.trim)
